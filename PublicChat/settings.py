@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #3-rd party app
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_swagger',
     #my_app
     'chat',
     'user_app',

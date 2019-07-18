@@ -25,4 +25,4 @@ class MessagePostSerialization (serializers.ModelSerializer):
 class UserMessagePostSerialization (serializers.ModelSerializer):
     class Meta:
         model = user_message
-        fields = ['user', 'email', 'message']
+        fields = ['message']

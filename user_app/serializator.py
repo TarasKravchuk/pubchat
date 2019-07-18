@@ -28,4 +28,3 @@ class ChatUserCreateSerialization(serializers.ModelSerializer):
     class Meta:
         model = ChatUser
         fields = ['user', 'user_email']
-

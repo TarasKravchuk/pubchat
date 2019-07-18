@@ -1,15 +1,14 @@
 from rest_framework import permissions
 from user_app.validator import email_valid
-from rest_framework.views import APIView
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from .serializator import *
 # Create your views here.
 
 
-class UserRegistrstion (APIView):
+class UserRegistrstion (GenericAPIView):
     permission_classes = [permissions.AllowAny,]
-    def get (self, request):
-        return Response(status=201)
+    serializer_class = ChatUserCreateSerialization
 
     def post (self, request):
 
@@ -31,6 +30,3 @@ class UserRegistrstion (APIView):
             return Response(status=201)
         except:
             return Response(status=400)
-
-
-
